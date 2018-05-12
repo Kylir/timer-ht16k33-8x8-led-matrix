@@ -20,6 +20,9 @@ But the goal is to power everything with a battery and 3D print a tiny case.
 
 ## Build the project
 
+This project uses avrdude and avr-gcc.
+The makefile is tailored for an ATMega328 running at 16 Mhz flashed by a usbtiny programmer. 
+
 + Clone the repo: `git clone ` and go into the directory.
 
 + Connect the LED matrix to the microcontroller using the I2C clock and data pins.
