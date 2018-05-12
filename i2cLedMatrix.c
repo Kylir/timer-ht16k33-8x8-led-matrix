@@ -1,7 +1,7 @@
 #include <i2cmaster.h>
 #include <util/delay.h>
 
-#define HT16K33_ADDRESS  0xE0
+#define HT16K33_ADDRESS 0xE0
 #define HT16K33_OSCILLATOR_ON 0x21
 #define HT16K33_BLINK_CMD 0x80
 #define HT16K33_BLINK_DISPLAYON 0x01

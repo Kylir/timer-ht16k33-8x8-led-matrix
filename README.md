@@ -29,7 +29,7 @@ But at some point I want to change for ATTiny, power everything with a small bat
 ## Build the project
 
 This project uses avrdude and avr-gcc.
-The makefile is tailored for an ATMega328 running at 16 Mhz flashed by a usbtiny programmer. 
+The makefile is tailored for an ATMega328 running at 16 Mhz flashed by a usbtiny programmer.
 
 + Clone the repo: `git clone ` and go into the directory.
 
