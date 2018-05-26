@@ -17,7 +17,7 @@ void initHt16k33(void) {
     i2c_stop();
 }
 // Display ON and no blink
-void initNoBlink() {
+void initNoBlink(void) {
     i2c_start(HT16K33_ADDRESS);
     i2c_write(HT16K33_BLINK_CMD | HT16K33_BLINK_DISPLAYON); //0x81
     i2c_stop();
@@ -29,6 +29,13 @@ void setBrightness(uint8_t b) {
     i2c_write(0xE0 | b);
     i2c_stop();
 }
+// Set to 0 all the display buffer
+void clearBuffer(void) {
+    for (int i = 0 ; i < 8 ; i++) {
+        displaybuffer[i] = 0;
+    }
+}
+
 // Switch led (x,y) ON in the buffer (need to call display to see the result)
 void setPixel(int16_t x, int16_t y) {
     x += 7;
@@ -68,9 +75,17 @@ int main(void) {
     initHt16k33();
     initNoBlink();
     setBrightness(1);
+    clearBuffer();
+    display();
 
     // Switch on a LED every second
     for(;;) {
+
+        // wait 60 sec
+        for (int i=0 ; i < 60 ; i++) {
+            _delay_ms(1000);
+        }
+
         // according to the mode, switch on or off the leds
         if (mode == 0) {
             setPixel(x,y);
@@ -79,9 +94,6 @@ int main(void) {
         }
 
         display();
-        // wait 1 sec
-        _delay_ms(1000);
-        
         x++;
         // at the end of the row switch row
         if (x%8 == 0) {
