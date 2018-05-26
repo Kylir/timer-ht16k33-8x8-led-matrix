@@ -13,7 +13,7 @@ The main functions are:
 + `unsetPixel(x, y)` to switch OFF one LED at coordinates (x,y).
 + `display()` to trigger a display.
 
-There are also several functions to initialise the chip driving the LED, switch on the display and set the brightness. 
+There are also several functions to initialise the chip driving the LED, switch on the display and set the brightness.
 
 The LED matrix I'm using is the [Adafruit 0.7''](https://learn.adafruit.com/adafruit-led-backpack/0-8-8x8-matrix).
 You can buy it [here](https://shop.pimoroni.com/products/adafruit-mini-8x8-led-matrix-w-i2c-backpack) in UK.
