@@ -5,6 +5,8 @@
 This is a simple project to build a small timer using a 8x8 LED matrix driven by a ATTiny85 microcontroller.
 Each LED is a minute but I'm still searching for an original way to display the time.
 
+![An image of the project on a mini breadboard](https://github.com/Kylir/timer-ht16k33-8x8-led-matrix/blob/master/IMG_20180527_131523.jpg)
+
 The code to switch on and off LEDs is inspired by the [Adafruit library available in this repo](https://github.com/adafruit/Adafruit_LED_Backpack).
 
 The main functions are:
