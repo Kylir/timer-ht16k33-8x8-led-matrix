@@ -21,8 +21,9 @@ The LED matrix I'm using is the [Adafruit 0.7''](https://learn.adafruit.com/adaf
 You can buy it [here](https://shop.pimoroni.com/products/adafruit-mini-8x8-led-matrix-w-i2c-backpack) in UK.
 The LED matrix is driven by a ht16k33 using I2C commands ([datasheet](https://cdn-shop.adafruit.com/datasheets/ht16K33v110.pdf)).
 
-For the gory details of the I2C communications I use a software implementation from [this library from Peter Fleury](http://homepage.hispeed.ch/peterfleury/avr-software.html).
-I'm also using the makefile provided the library.
+For the gory details of the I2C communications I use a software implementation (in Assembler) from [this library from Peter Fleury](http://homepage.hispeed.ch/peterfleury/avr-software.html). The ATTIny doesn't have an I2C (a.k.a. TWI) built-in hardware.
+
+The makefile is also from the same library.
 
 At the moment the LED matrix and the microcontroller are on a mini breadboard and powered by a fairly big battery.
 But at some point I want to change for a smaller battery and 3D print a tiny case.
